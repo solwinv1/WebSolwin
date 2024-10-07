@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar and Wind Monitoring</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Battery Monitoring Section -->
+        <div class="section battery">
+            <h2>Battery Voltage</h2>
+            <p>Current Voltage: <span class="value" id="Bat">Loading...</span> V</p>
+        </div>
+
+        <!-- Solar Monitoring Section -->
+        <div class="section solar">
+            <h2>Solar Monitoring</h2>
+            <p>Solar Voltage: <span class="value" id="SolVolt">Loading...</span> V</p>
+            <p>Solar Current: <span class="value" id="SolCurrent">Loading...</span> A</p>
+            <button class="btn" id="solarButton">
+                <i class="material-icons"></i>Turn Off Solar
+            </button>
+        </div>
+
+        <!-- Wind Monitoring Section -->
+        <div class="section wind">
+            <h2>Wind Monitoring</h2>
+            <p>Wind Voltage: <span class="value" id="WindVolt">Loading...</span> V</p>
+            <p>Wind Current: <span class="value" id="WindCurrent">Loading...</span> A</p>
+            <button class="btn" id="windButton">
+                <i class="material-icons"></i>Turn Off Wind
+            </button>
+        </div>
+    </div>
+
+    <!-- Firebase and Custom JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.23.0/firebase-app-compat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.23.0/firebase-database-compat.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
