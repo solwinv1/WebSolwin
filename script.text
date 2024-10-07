@@ -73,4 +73,13 @@ document.getElementById('solarButton').addEventListener('click', function() {
 });
 
 document.getElementById('windButton').addEventListener('click', function() {
-    const buttonLabel = document.getElementById
+    const buttonLabel = document.getElementById('windButton').textContent;
+
+    if (buttonLabel === 'Turn On Wind') {
+        document.getElementById('windButton').textContent = 'Turn Off Wind';
+        database.ref('/windControl').set("turn on");
+    } else {
+        document.getElementById('windButton').textContent = 'Turn On Wind';
+        database.ref('/windControl').set("turn off");
+    }
+});
